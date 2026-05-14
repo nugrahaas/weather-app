@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# HEAD
 # weather-app
 Weather App built on ReactJS with OpenWeather APIs
 =======
