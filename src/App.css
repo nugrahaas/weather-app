@@ -1,0 +1,192 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #2c3e50, #000000); /* Dark Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Search Styling */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00d2ff;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #00d2ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #3a7bd5;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+/* Weather Card Styling */
+.weather-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.8s ease;
+}
+
+.location h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.location span {
+  background: #ff416c;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 10px 0;
+  text-shadow: 2px 2px 10px rgba(0, 210, 255, 0.5);
+}
+
+.main-cond {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00d2ff;
+}
+
+.desc-cond {
+  font-weight: 300;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.extra-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.info-item span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.welcome-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container untuk membungkus input dan dropdown */
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0; /* Pastikan list mengikuti lebar input group */
+  background: #2c3e50; /* Sesuaikan dengan tema dark kamu */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999; /* Pastikan paling depan */
+  border-radius: 10px;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.suggestions-list li {
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.suggestions-list li:last-child {
+  border-bottom: none;
+}
+
+.suggestions-list li:hover {
+  background: rgba(0, 210, 255, 0.2); /* Warna cyan sesuai tema kamu */
+  padding-left: 25px; /* Efek geser sedikit saat hover */
+}
+
+.suggestions-list li span {
+  float: right;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #00d2ff;
+}
